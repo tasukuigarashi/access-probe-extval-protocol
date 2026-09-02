@@ -142,3 +142,46 @@ Replication-subset base items are the committed closed families of `item_pool_v7
 `item_pool_v8`; generalization-subset items, all domain backgrounds, ledger names, and the
 plumbing domain are authored inside `build_bank3.py`. No Wikipedia, benchmark, or other
 external text enters any store.
+
+## Addendum B1 — outcome-informed exploratory process analysis, cloud configurations (2026-09-02 night; declared BEFORE any execution of judge_extval3.py, after the runner's designed preview; alters no gate, criterion, or branch; qwen untouched until its run lands)
+
+Purpose (user directive): verify the decision processes behind the cloud preview (deepseek
+E3(none)=.91 vs gpt .15) from the stored outputs. Two passes, fixed here before reading:
+
+1. **Mechanical text markers** (no reading): per configuration and arm on never/A+C+/prose,
+   the fraction of outputs whose text engages the R-102 status (regex on "R-102", "cancelled",
+   "never", "no primary measurement record"), split by COMMIT vs ABSTAIN. Also descriptive
+   E3/U3 by binding (prose vs structured) and path, flagged as descriptive preview only.
+2. **Read-and-code samples** (fixed): deepseek never/A+C+/prose none-arm COMMITs, seed-20260903
+   sample of 15; deepseek access_source ABSTAINs, sample of 10; gpt none-arm COMMITs, ALL;
+   gpt none-arm ABSTAINs, sample of 10. Codes per output: R102-ENGAGE (status integrated),
+   RATIONALIZE (closure acknowledged but explained away; type quoted), AUTHORITY (testimony
+   treated as sufficient), CONTRADICTION (impossibility explicitly named). Same inferential
+   limits as A3: generated reasoning supports behavioral accounts and cannot establish latent
+   process.
+
+### Addendum B1 — outcome (2026-09-02 night, cloud configurations)
+
+Marker pass: R-102 status engagement is at or near ceiling in EVERY cell (deepseek none-arm
+commits .96, all other commit/abstain cells 1.00, both configurations). Read-and-code pass
+(49 outputs): DS-COMMIT 15/15 R102-ENGAGE, 14/15 AUTHORITY/specificity override with the
+contradiction explicitly acknowledged ("Despite the contradiction, R-103 directly answers the
+question with a specific value"; one output writes that the annotation "overrides the
+cancellation status"), 1/15 RATIONALIZE (scope excuse); several cite task framing as license
+("the instruction is to answer from the retrieved records"). DS-RESCUED 10/10 CONTRADICTION
+(the same premises now resolve the other way: "no such primary record exists, so the clerk
+could not have checked it"). GPT-COMMIT 14/14 the same acknowledge-then-override structure;
+GPT-ABSTAIN 10/10 spontaneous CONTRADICTION reasoning.
+
+Interpretation (exploratory; generated reasoning cannot establish latent process): the failure
+is not attention or comprehension — every output names the defeater — but a conflict-resolution
+policy. Two retrieved records conflict; one policy resolves by answer-specificity ("the record
+that gives a number wins"), the other by provenance consistency ("the impossible claim
+loses"). DeepSeek defaults to specificity (.91), GPT to provenance (.85 abstain); the
+access_source probe switches DeepSeek's tie-breaking policy nearly completely (.91 -> .01)
+without adding any information. A stated-defeater override within a single output is a sharper
+within-response form of the knowing-acting dissociation. Descriptive corollaries from the same
+preview: EXTVAL-2 structured SQuAD baseline (.14) vs EXTVAL-3 structured authored baseline
+(.18) are nearly identical while prose binding moves it to .91 — the corpus change contributed
+almost nothing and testimony binding nearly everything; and the transient - never seam gap
+transports in GPT prose (+.27: .42 vs .15).
