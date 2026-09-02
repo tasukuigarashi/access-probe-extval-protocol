@@ -326,3 +326,16 @@ only; protocol criteria unchanged):**
 **Hash naming:** the registered bank hashes are canonical JSON-object SHA-256 values
 (sha256 of json.dumps(..., sort_keys=True)), not file-byte hashes. Byte-level file hash of the
 registered bank_v2.json as committed: 1d6f865a57b402f7... (first 16 hex).
+
+### Addendum A2 — qwen outcome (2026-09-02, per the procedure frozen in A3)
+
+39 outputs coded (24 = all never_created A- commits; 15 = seed-20260902 sample of 67 A+C+
+none-arm abstentions; manifest stored with the audit file). Counts: M-EXPRESS 0/39;
+M-CONFLICT 0/39; TEST-AWARE 0/39; DERIVE 24/24 commits (Fresno_1 = B, IPCC_1 / Pharmacy_1 /
+Private_school_1 = C; all excluded from the D33 primary set by design; the 6 ORIG matches are
+again derivation coincidences on items whose residual text still supports the true value).
+Distinctive of qwen: a majority of the sampled abstentions cite the causal closure explicitly
+("no measurement was taken ... no primary measurement record exists" and that the annotation
+"conflicts with the status record"), rather than only discounting the annotation value as
+unlabeled. Same inferential limits as A3: this supports a text-derivation account and cannot
+establish that latent memory played no role.
