@@ -225,3 +225,22 @@ parse-rate table by arm x block x configuration.
 - "Naturalistic transport" label: rejected as overclaim; the passages are natural, the status
   line, annotation, and {X} are synthetic → "semi-naturalistic SQuAD-derived record-search
   transport".
+
+## Addendum A1 — memory-intrusion diagnostic (2026-09-02; declared after the cloud runs completed, BEFORE any execution of judge_extval2.py)
+
+Motivation: the passages derive from SQuAD (Wikipedia), so a model may remember an item's true
+value; rejection of the asserted candidate {X} could then reflect memory conflict ("that is not
+the number I remember") rather than causal-closure reasoning. This confound cannot affect the
+paired probe contrasts (T2-E, T2-U compare the same items across arms) but could attenuate the
+V2 gate level and the retained-path control.
+
+Exploratory diagnostic, fixed here in advance; it alters no gate, criterion, or branch:
+**memory-intrusion rate** = P(committed value numerically equals the item's original SQuAD
+answer), reported per configuration x block x path x context x arm alongside endorsement
+(value = {X}) and other-value rates ({X} != original by the registered material audit, so the
+categories are disjoint). Interpretation fixed in advance: a near-zero intrusion rate in the
+assertion-absent (A-) cells indicates models do not import memorized values into answers,
+bounding the memory-conflict confound empirically; a substantial rate is reported as an
+interpretive limitation on V2 levels (not as grounds to re-run or re-judge). Script:
+`memory_diag.py`, committed with this addendum. The clean structural fix (post-cutoff or fully
+novel documents) remains future work as already stated in the manuscript.
