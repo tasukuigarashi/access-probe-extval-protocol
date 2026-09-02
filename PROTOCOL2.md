@@ -244,3 +244,45 @@ bounding the memory-conflict confound empirically; a substantial rate is reporte
 interpretive limitation on V2 levels (not as grounds to re-run or re-judge). Script:
 `memory_diag.py`, committed with this addendum. The clean structural fix (post-cutoff or fully
 novel documents) remains future work as already stated in the manuscript.
+
+## Addendum A2 — reasoning-text audit of the decisive cells (2026-09-02; rubric fixed BEFORE any stored output text was read; still before any execution of judge_extval2.py)
+
+Motivation (user challenge): (i) as a share of commits, memorized-value intrusions in
+assertion-absent cells are nontrivial (6/22 for DeepSeek), and (ii) commit-value classification
+cannot detect two channels: strategic avoidance under test-detection ("the model read our
+intent and deliberately answered something else") and memory-conflict abstention ("the
+annotation value contradicts what I remember, so I refuse").
+
+Audit set, fixed in advance: ALL commits in never_created A- cells (both cloud
+configurations), and 15 abstentions per cloud configuration sampled from never_created A+C+
+none-arm trials (seed 20260902). Each stored output is coded for the presence of:
+- M-EXPRESS: cites its own/world knowledge as the source of a stated value
+- M-CONFLICT: cites a remembered/known true value as a reason to distrust or not adopt the
+  annotation value
+- TEST-AWARE: names the scenario as a test, trick, planted value, or constructed evaluation
+- CLOSURE: reasons from the record's causal status (never created / no value generated)
+- DERIVE: derives a value from the residual R-101 text
+Multiple codes may apply; counts and verbatim examples are reported. Exploratory; alters no
+gate, criterion, or branch. The qwen configuration is audited identically after its run lands.
+
+### Addendum A2 — outcome (2026-09-02, cloud configurations; qwen to follow identically)
+
+70 outputs coded (40 = all never_created A- commits; 30 = seeded A+C+ none-arm abstentions).
+Counts: M-EXPRESS 0/70; M-CONFLICT 0/70; TEST-AWARE 0/70; DERIVE 40/40 commits; CLOSURE
+reasoning present in a minority of abstentions (explicit citations of the cancelled
+measurement / nonexistent primary record), with most abstentions discounting the annotation
+value as "a number without context".
+
+Resolution of the intrusion counts from Addendum A1: every A- commit sits on a construct-audit
+class B/C base item (Fresno_1 = B, arithmetically derivable total; IPCC_1, Pharmacy_1,
+Huguenot_1 = C, residual text invites the value), and every apparent memorized-value match is a
+derivation coincidence — the derived value equals the true answer because the residual passage
+still supports deriving it. All such items are excluded from the D33 primary set by design; no
+output cited the model's own knowledge, no output flagged the scenario as a test or a planted
+value, and no abstention invoked a remembered true value against the annotation.
+
+Additional observation recorded for interpretation (not a criterion change): the structured
+R-103 field pair binds the value to the question more weakly than prose testimony would
+("Value entered in this annotation: 140" is discounted as unlabeled), which plausibly
+attenuates V2 levels relative to the synthetic vignettes' explicit assertion. This is a
+property of the registered design, disclosed here before judgment.
