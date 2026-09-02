@@ -1,0 +1,198 @@
+{
+ "date": "2026-09-01",
+ "auditor_note": "store text only; model outputs not consulted",
+ "classes": {
+  "Economic_inequality_1": {
+   "class": "D",
+   "rationale": ""
+  },
+  "European_Union_law_1": {
+   "class": "D",
+   "rationale": "40 laws is a different quantity"
+  },
+  "Force_1": {
+   "class": "D",
+   "rationale": "1015 K is a different quantity"
+  },
+  "French_and_Indian_War_1": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Fresno,_California_1": {
+   "class": "B",
+   "rationale": "count/percent pairs give total: 245,306/0.496=494,568 (removed 494,665)"
+  },
+  "Fresno,_California_3": {
+   "class": "D",
+   "rationale": "kids share absent; only other categories"
+  },
+  "Fresno,_California_5": {
+   "class": "D",
+   "rationale": "household size present, family size not derivable"
+  },
+  "Fresno,_California_7": {
+   "class": "B",
+   "rationale": "density x area from housing pair: 4,097.9 x (149,025/1,427.9) = 427,700 (removed 427,652)"
+  },
+  "Harvard_University_1": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Harvard_University_3": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Huguenot_1": {
+   "class": "C",
+   "rationale": "'several hundred' + 148 naturalized invites a guess"
+  },
+  "Intergovernmental_Panel_on_Climate_Change_1": {
+   "class": "C",
+   "rationale": "12 proxy reconstructions invites (wrong-quantity) 12"
+  },
+  "Jacksonville,_Florida_1": {
+   "class": "D",
+   "rationale": "15 schools is a different quantity"
+  },
+  "Jacksonville,_Florida_3": {
+   "class": "D",
+   "rationale": "rank info only"
+  },
+  "Normans_1": {
+   "class": "C",
+   "rationale": "1051 event constrains 'return' to shortly before"
+  },
+  "Normans_3": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Normans_5": {
+   "class": "D",
+   "rationale": "1064 is a different event"
+  },
+  "Pharmacy_1": {
+   "class": "C",
+   "rationale": "1317 'old pharmacies still operating' invites 1317"
+  },
+  "Private_school_1": {
+   "class": "C",
+   "rationale": "7.8% overall-pupils invites wrong-quantity guess"
+  },
+  "Private_school_3": {
+   "class": "D",
+   "rationale": "boards named but not counted"
+  },
+  "Private_school_5": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Private_school_7": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Scottish_Parliament_1": {
+   "class": "D",
+   "rationale": "no day counts remain"
+  },
+  "Sky_(United_Kingdom)_1": {
+   "class": "D",
+   "rationale": "40,000 registered is a different quantity"
+  },
+  "Sky_(United_Kingdom)_3": {
+   "class": "D",
+   "rationale": ""
+  },
+  "Southern_California_1": {
+   "class": "D",
+   "rationale": "latitude only"
+  },
+  "Southern_California_3": {
+   "class": "D",
+   "rationale": "no numeric anchor"
+  },
+  "Southern_California_5": {
+   "class": "D",
+   "rationale": "famous value but not in text; memorization-prone"
+  },
+  "Southern_California_7": {
+   "class": "D",
+   "rationale": "'exceed five million' bounds only"
+  },
+  "Steam_engine_1": {
+   "class": "C",
+   "rationale": "90/135/120 for other configs invites 90"
+  },
+  "Steam_engine_3": {
+   "class": "D",
+   "rationale": "duty figures unrelated"
+  },
+  "Steam_engine_5": {
+   "class": "D",
+   "rationale": "truncation artifact: sentence ends 'consumes approx.'"
+  },
+  "University_of_Chicago_1": {
+   "class": "D",
+   "rationale": "five divisions unrelated"
+  },
+  "University_of_Chicago_3": {
+   "class": "C",
+   "rationale": "15 Core courses invites (wrong-quantity) 15"
+  },
+  "University_of_Chicago_5": {
+   "class": "D",
+   "rationale": ""
+  },
+  "University_of_Chicago_7": {
+   "class": "D",
+   "rationale": "percent shares without totals"
+  },
+  "Victoria_(Australia)_1": {
+   "class": "D",
+   "rationale": "grain data only"
+  },
+  "Victoria_(Australia)_3": {
+   "class": "D",
+   "rationale": "79/33 municipal units unrelated; constitutional 12 memorization-prone"
+  },
+  "Victoria_(Australia)_5": {
+   "class": "D",
+   "rationale": "primary+secondary totals span both sectors"
+  },
+  "Victoria_(Australia)_7": {
+   "class": "C",
+   "rationale": "school counts invite 489/(489+214)=69.6% wrong derivation"
+  },
+  "Warsaw_1": {
+   "class": "D",
+   "rationale": "elevations only"
+  },
+  "Warsaw_2": {
+   "class": "D",
+   "rationale": "15 km unrelated"
+  },
+  "Warsaw_3": {
+   "class": "B",
+   "rationale": "350,000 Jews = 30% gives 1933 total 1,166,667; minus Jewish = 816,667 vs removed 833,500 (within 2%)"
+  },
+  "Warsaw_4": {
+   "class": "D",
+   "rationale": "truncation artifact: 'In 1939, c.' dangling"
+  },
+  "Warsaw_5": {
+   "class": "D",
+   "rationale": "truncation artifact: same dangling fragment; no derivation"
+  },
+  "Warsaw_6": {
+   "class": "C",
+   "rationale": "'Eight years later, in 1909' + 281,754/0.369=763,560 anchors a near guess for 1901"
+  },
+  "Warsaw_7": {
+   "class": "D",
+   "rationale": "30 is veto-override days"
+  },
+  "Yuan_dynasty_0": {
+   "class": "D",
+   "rationale": "1368 end year only; 1271 memorization-prone"
+  }
+ }
+}

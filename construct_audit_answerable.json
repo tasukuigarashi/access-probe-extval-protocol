@@ -1,0 +1,21 @@
+{
+ "date": "2026-09-01",
+ "flags": {
+  "hard": {
+   "Pharmacy_2": "'30 of 28 newly FDA approved' - impossible pair",
+   "European_Union_law_0": "'74 per cent, or 156 of the 352' - 156/352=44%"
+  },
+  "soft": {
+   "Fresno,_California_2": "count perturbed, paired percent stale (11,082 vs 1.7%)",
+   "Fresno,_California_4": "count perturbed, paired percent stale (833 vs 0.9%)",
+   "Private_school_6": "'36,400 students or 3.7%' - pair broken by perturbation",
+   "Jacksonville,_Florida_4": "'54.8 males per 100 females' demographically odd"
+  },
+  "anachronism": {
+   "Pharmacy_0": "monastery pharmacy 'opened in 922'",
+   "Normans_2": "'In 1386, Duke William II conquered England'",
+   "Southern_California_6": "'magnitude 10.7+ earthquake' physically implausible"
+  }
+ },
+ "note": "48 answerable items audited; unflagged 39 clean"
+}
