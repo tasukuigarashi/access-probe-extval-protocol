@@ -25,3 +25,21 @@ again; and, notably, the access probe carries a large answerable cost in annotat
 contexts (dQ +.40 qwen, +.13 gpt, +.03 deepseek; one-sided upper bounds .54/.21/.08 vs the
 .05 margin), a stronger form of the context-conditional no-harm boundary from EXTVAL-1.
 Full CSVs, judge output, and the A1-A3 diagnostic addenda are in the main study repository.
+
+# EXTVAL-3 outcome (2026-09-03)
+
+**Gate verdict: not established (success 1 of 3; 2 required).** V3 passed only in
+deepseek-v3.2, which passed EVERY criterion: E3(none)=.91, rescue dE=+.90 (CI [+.83,+.96]),
+H3 one-sided upper +.022 <= .05, missingness-stable, and all gates hold on the prospective
+generalization subset (4 new domains). access_source is directly superior to both
+verification (+.05, CI [+.01,+.10]) and access_records (+.29) — the first CI-supported
+access-specificity result in the program. gpt-5.2 = .15 (rescue direction +.15, CI
+[+.05,+.27], below the .20 gate; the generalization subset alone passes all gates); qwen =
+.08 (binding effect reversed vs its structured baseline .23).
+
+Cross-configuration regularities (registered secondaries): assertion-absent cells at .00 in
+every configuration; the transient-never seam gap transports with CIs in gpt (+.27) and qwen
+(+.31); and H3 no-harm holds in ALL configurations — the explicit "Recorded value:" binding
+of v3.1 eliminated the probe misfire cost observed in EXTVAL-2 (qwen retained commit .87
+under the probe, dQ -.02). The EXTVAL-2 verdict and branch are unaffected (PROTOCOL3
+section 0). Full CSVs and the B1 process addendum are in the main repository.
