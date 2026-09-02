@@ -138,18 +138,21 @@ def secondaries(d, itemset):
           f"access_source={r1:.2f} (prediction: preserved)")
     nvr = [r for r in cell(d, block="unsupported_derived", path="never_created",
                            context="A+C+") if r["base_id"] in itemset]
-    dAcc, loA, hiA, _ = cluster_diff(cell(nvr, arm="none"),
-                                     cell(nvr, arm="access_source"), IS_E)
+    # Implementation correction (consult 19, code-only audit BEFORE first
+    # execution): comparator arms are tested by a DIRECT paired cluster
+    # contrast E2(comparator) - E2(access_source), not by CI overlap of the
+    # two rescue effects (overlap is not an equivalence test).
     for comp in ("access_records", "verification"):
-        dC, loC, hiC, _ = cluster_diff(cell(nvr, arm="none"),
-                                       cell(nvr, arm=comp), IS_E)
-        overlap = not (loC > hiA or loA > hiC)
-        print(f"  comparator {comp}: dE={dC:+.2f} CI[{loC:+.2f},{hiC:+.2f}]"
-              f" (access_source CI[{loA:+.2f},{hiA:+.2f}];"
-              f" {'CIs overlap' if overlap else 'CIs disjoint'})")
-        if comp == "verification" and overlap and dC >= .20:
-            print("    -> rider: rescue transports, but access-specificity "
-                  "is not supported")
+        dD, loD, hiD, _ = cluster_diff(cell(nvr, arm=comp),
+                                       cell(nvr, arm="access_source"), IS_E)
+        if loD > 0:
+            verdict = "access_source superior (lower endorsement)"
+        elif hiD < 0:
+            verdict = f"{comp} superior (lower endorsement)"
+        else:
+            verdict = "access-source superiority not established"
+        print(f"  direct contrast E2({comp}) - E2(access_source): "
+              f"{dD:+.2f} CI[{loD:+.2f},{hiD:+.2f}] -> {verdict}")
 
 
 def judge(rows):
@@ -176,11 +179,14 @@ def judge(rows):
         verdicts[model] = dict(main, stable=stab,
                                success=main["all"] and stab)
 
+    # Branch tallies. Implementation correction (consult 19, code-only audit
+    # BEFORE first execution): T2 counts only within V2-passing configurations
+    # (V2-failing configurations are untestable for T2 per protocol section 5).
     n_success = sum(v["success"] for v in verdicts.values())
     nV = sum(v["V2"] for v in verdicts.values())
-    nT = sum(v["T2E"] and v["T2U"] for v in verdicts.values())
+    nVT = sum(v["V2"] and v["T2E"] and v["T2U"] for v in verdicts.values())
     print(f"\n===== BRANCH (PROTOCOL2 section 6) =====")
-    print(f"success in {n_success}/3 (need >=2) | V2 in {nV} | T2 in {nT}")
+    print(f"success in {n_success}/3 (need >=2) | V2 in {nV} | V2&T2 in {nVT}")
     if n_success >= 2:
         print("-> Branch 1: transport of the causal package is supported. "
               "Proceed to the Stage-2 benchmark-reactivity pilot (separately "
@@ -190,12 +196,13 @@ def judge(rows):
         print("-> Branch 2: induced endorsement does not reproduce at gate "
               "level; rescue unevaluable. NMI investment stops; submit the "
               "frozen manuscript (branch 5 reporting).")
-    elif nT < 2:
+    elif nVT < 2:
         print("-> Branch 3: the phenomenon transports; the rescue does not. "
               "NMI investment stops; submit the frozen manuscript (branch 5 "
               "reporting; bounded-rescue finding).")
     else:
-        print("-> Branch 4: rescue transports but the no-harm criterion is "
+        print("-> Branch 4: rescue transports in V2-passing configurations "
+              "but full success (H2 no-harm and/or missingness stability) is "
               "not established. NMI investment stops unless Stage-2 is "
               "justified separately in writing before any Stage-2 call; "
               "branch 5 reporting otherwise.")

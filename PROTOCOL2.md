@@ -286,3 +286,43 @@ R-103 field pair binds the value to the question more weakly than prose testimon
 ("Value entered in this annotation: 140" is discounted as unlabeled), which plausibly
 attenuates V2 levels relative to the synthetic vignettes' explicit assertion. This is a
 property of the registered design, disclosed here before judgment.
+
+## Addendum A3 — consult-19 audit: implementation corrections and diagnostic status (2026-09-02; before any execution of judge_extval2.py)
+
+**Status preamble for Addenda A1/A2 (supersedes any stronger wording above):** these addenda
+were specified after descriptive cloud-run cell summaries were visible (the runner's designed
+preview), but before the prespecified D33/CI/H2 branch computation and before completion of the
+qwen run. They are therefore **outcome-informed exploratory diagnostics, not outcome-blind
+preregistered analyses**. They alter no registered outcome, item set, criterion, or branch.
+
+**A1 corrections:** both denominators are reported: DeepSeek ORIG-commits 6/384 trials (1.6%)
+and 6/22 commits (27.3%); GPT 1/384 trials (0.3%) and 1/18 commits. The earlier sentence that
+the confound "cannot affect the paired probe contrasts" is replaced by: using the same items
+across arms controls static item familiarity, but does not exclude probe-induced retrieval of
+memorized information; the diagnostic bounds expressed/imported-memory behavior and does not
+prove that latent memory played no role.
+
+**A2 corrections:** the conclusion is weakened to: every ORIG-matching output contained an
+explicit derivation from the residual record, and every such item was independently classified
+B/C; no output explicitly invoked model memory; this supports a text-derivation account of the
+observed responses, but generated reasoning cannot establish that latent memory played no role.
+Fixed qwen procedure (before the qwen run lands): code ALL never/A- commits; ALL A+C+ none-arm
+abstentions if fewer than 15, else a seed-20260902 sample of 15; store a sampling manifest of
+trial identifiers; the codebook and denominators are frozen as registered. A second coder from
+a different model family will blind-recode the full audit set (model, arm, and A1 labels
+hidden, randomized order); per-code agreement and adjudications will be reported.
+
+**judge_extval2.py corrections (code-only; detected by a consult-19 code audit BEFORE the
+judge's first execution; no target CSV was used to test the corrections — a synthetic fixture
+only; protocol criteria unchanged):**
+1. Branch tally: T2 now counts only within V2-passing configurations (V2-failing
+   configurations are untestable for T2 per section 5); the prior draft tallied T2 across all
+   configurations, which could misroute branches 3/4.
+2. Comparator rider: replaced CI-overlap inspection (not an equivalence test) with the direct
+   paired cluster contrast E2(comparator) − E2(access_source); when that CI includes 0 the
+   fixed wording is "access-source superiority was not established"; no equivalence is claimed
+   (no margin was prespecified).
+
+**Hash naming:** the registered bank hashes are canonical JSON-object SHA-256 values
+(sha256 of json.dumps(..., sort_keys=True)), not file-byte hashes. Byte-level file hash of the
+registered bank_v2.json as committed: 1d6f865a57b402f7... (first 16 hex).
